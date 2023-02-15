@@ -15,7 +15,6 @@ interface InputProps extends TextInputMaskProps {
 interface InputValueReference {
   value: string;
 }
-
 export function InputMask({
   name,
   icon,
