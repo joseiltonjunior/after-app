@@ -8,17 +8,16 @@ import { Button } from '@components/Button';
 export const KeyboardAvoid = styled.KeyboardAvoidingView.attrs({
   behavior: Platform.OS === 'ios' ? 'padding' : undefined,
   flex: 1,
-})`
-  background-color: ${({ theme }) => theme.colors.Dark_600};
-`;
+})``;
 
 export const ScrollViewContainer = styled(ScrollView).attrs({
   keyboardShouldPersistTaps: 'handled',
-})``;
-
-export const Container = styled.View`
-  padding: 0 ${responsiveSize(20)}px;
+})`
+  background-color: ${({ theme }) => theme.colors.Dark_600};
+  padding: ${responsiveSize(20)}px;
 `;
+
+export const Container = styled.View``;
 
 export const ViewLoading = styled.View`
   justify-content: center;

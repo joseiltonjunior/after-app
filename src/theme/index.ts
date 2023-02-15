@@ -8,8 +8,8 @@ export default {
     Red: '#FF3B3F',
   },
   font_family: {
-    regular: 'Roboto_400Regular',
-    bold: 'Roboto_700Bold',
+    regular: 'RobotoSlab-Regular',
+    bold: 'RobotoSlab-Bold',
   },
   font_size: {
     sm: 14,

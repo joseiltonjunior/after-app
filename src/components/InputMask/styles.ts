@@ -21,6 +21,7 @@ export const Container = styled.View<ContainerProps>`
 
   flex-direction: row;
   align-items: center;
+  gap: ${responsiveSize(15)}px;
 
   ${(props) =>
     props.isErrored &&
@@ -28,12 +29,11 @@ export const Container = styled.View<ContainerProps>`
     css`
       border-color: ${({ theme }) => theme.colors.Red};
     `}
-
   ${(props) =>
     props.isFocused &&
     css`
       border-color: ${({ theme }) => theme.colors.Orange};
-    `}
+    `};
 `;
 
 export const TextInput = styled(TextInputMask).attrs({})`
@@ -45,10 +45,8 @@ export const TextInput = styled(TextInputMask).attrs({})`
 `;
 
 export const Icon = styled(FeatherIcon).attrs({
-  size: responsiveSize(25),
-})`
-  margin-right: ${responsiveSize(15)}px;
-`;
+  size: responsiveSize(22),
+})``;
 
 export const TextTitleInput = styled.Text`
   font-family: 'RobotoSlab-Regular';
