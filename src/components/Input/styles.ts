@@ -34,25 +34,27 @@ export const Container = styled.View<ContainerProps>`
     `}
 `;
 
-export const Input = styled.TextInput`
+export const TextInput = styled.TextInput`
   flex: 1;
   color: ${theme.colors.Light};
   font-size: ${responsiveSize(16)}px;
   font-family: 'RobotoSlab-Medium';
+  text-align: left;
 `;
 
 export const Icon = styled(FeatherIcon).attrs({
-  size: responsiveSize(22),
+  size: responsiveSize(25),
 })`
   margin-right: ${responsiveSize(15)}px;
 `;
 
-export const ButtomEye = styled.TouchableOpacity``;
-
-export const IconEye = styled(FeatherIcon).attrs({
-  color: theme.colors.Dark_300,
-  size: responsiveSize(22),
-})``;
+export const TextError = styled.Text`
+  font-family: 'RobotoSlab-Regular';
+  font-size: ${responsiveSize(15)}px;
+  color: ${theme.colors.Light};
+  margin-bottom: ${responsiveSize(5)}px;
+  align-self: flex-end;
+`;
 
 export const TextTitleInput = styled.Text`
   font-family: 'RobotoSlab-Regular';

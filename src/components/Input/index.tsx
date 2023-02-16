@@ -1,17 +1,17 @@
 import React, {
-  useState,
   useEffect,
   useRef,
+  useState,
   useCallback,
-  ForwardRefRenderFunction,
-  forwardRef,
   useImperativeHandle,
+  forwardRef,
+  ForwardRefRenderFunction,
 } from 'react';
 
 import { TextInputProps } from 'react-native';
 import { useField } from '@unform/core';
 
-import { Container, Input, Icon, ButtomEye, IconEye, TextTitleInput } from './styles';
+import { Container, TextInput, Icon, TextError, TextTitleInput } from './styles';
 import { useTheme } from 'styled-components';
 
 interface InputProps extends TextInputProps {
@@ -20,27 +20,27 @@ interface InputProps extends TextInputProps {
   titleInput: string;
 }
 
-interface InputRef {
-  focus(): void;
-}
-
 interface InputValueReference {
   value: string;
 }
 
-const InputPassword: ForwardRefRenderFunction<InputRef, InputProps> = (
+interface InputRef {
+  focus(): void;
+}
+
+const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
   { name, icon, titleInput, ...rest },
   ref
 ): JSX.Element => {
-  const [isOpenPassword, setOpenPassword] = useState(true);
-  const [isFocused, setIsFocused] = useState(false);
-  const [isFilled, setIsFilled] = useState(false);
-  const { colors } = useTheme();
-
   const inputElementRef = useRef<any>(null);
 
   const { registerField, defaultValue = '', fieldName, error } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
+
+  const { colors } = useTheme();
+
+  const [isFocused, setIsFocused] = useState(false);
+  const [isFilled, setIsFilled] = useState(false);
 
   const handleInputFocus = useCallback(() => {
     setIsFocused(true);
@@ -80,7 +80,7 @@ const InputPassword: ForwardRefRenderFunction<InputRef, InputProps> = (
       <Container isFocused={isFocused} isErrored={!!error}>
         <Icon name={icon} color={isFocused || isFilled ? colors.Orange : colors.Dark_300} />
 
-        <Input
+        <TextInput
           {...rest}
           ref={inputElementRef}
           keyboardAppearance="dark"
@@ -90,17 +90,10 @@ const InputPassword: ForwardRefRenderFunction<InputRef, InputProps> = (
           onChangeText={(value) => {
             inputValueRef.current.value = value;
           }}
-          secureTextEntry={isOpenPassword ? true : false}
         />
-
-        <ButtomEye
-          onPress={() => (isOpenPassword ? setOpenPassword(false) : setOpenPassword(true))}
-        >
-          {isOpenPassword ? <IconEye name="eye" /> : <IconEye name="eye-off" />}
-        </ButtomEye>
       </Container>
     </>
   );
 };
 
-export default forwardRef(InputPassword);
+export default forwardRef(Input);

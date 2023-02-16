@@ -15,16 +15,12 @@ export const KeyboardAvoid = styled.KeyboardAvoidingView.attrs({
 
 export const ScrollViewContainer = styled(ScrollView).attrs({
   keyboardShouldPersistTaps: 'handled',
-  // justifyContent: 'center',
 })`
   background-color: ${({ theme }) => theme.colors.Dark_600};
 `;
 
 export const Container = styled.View.attrs({})`
-  /* align-items: center; */
   padding: 0 ${responsiveSize(20)}px;
-
-  /* background-color: red; */
 `;
 
 export const ComponentImg = styled(Image).attrs({})``;

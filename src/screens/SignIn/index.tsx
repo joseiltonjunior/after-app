@@ -88,8 +88,9 @@ export function SignIn(): JSX.Element {
             id: 2,
             phone_number: clearedPhone,
           };
-          // dispatch(setUser(newUser));
-          // navigation.navigate('SignUp' as never);
+          console.tron.log(newUser);
+          dispatch(setUser(newUser));
+          navigation.navigate('SignUp' as never);
         }
 
         setLoading(false);

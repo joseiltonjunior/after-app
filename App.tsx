@@ -27,4 +27,4 @@ function App(): JSX.Element {
 
 const OverlayApp = console.tron.overlay(App);
 
-export default App;
+export default OverlayApp;
