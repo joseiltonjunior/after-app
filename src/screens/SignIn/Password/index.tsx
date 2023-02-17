@@ -39,7 +39,7 @@ export function Password(): JSX.Element {
 
   const handleSignIn = useCallback(async (data: SignInFormData) => {
     setLoading(true);
-    console.log(data);
+
     try {
       formRef.current?.setErrors({});
 
@@ -52,8 +52,7 @@ export function Password(): JSX.Element {
       });
 
       if (data.password === user.password) {
-        // navigation.navigate('Home');
-        console.log('home');
+        navigation.navigate('Home' as never);
       } else {
         setModalErrorPassword(true);
       }
@@ -68,10 +67,6 @@ export function Password(): JSX.Element {
         return;
       }
     }
-  }, []);
-
-  useEffect(() => {
-    console.log(user);
   }, []);
 
   return (

@@ -5,8 +5,8 @@ import { RectButton } from 'react-native-gesture-handler';
 import { responsiveSize } from '@utils/responsive';
 import theme from '@theme/index';
 import { Button } from '@components/Button';
-// import { Input } from '@components/Input';
-import { InputPassword } from '@components/InputPassword';
+
+import InputPassword from '@components/InputPassword';
 
 export const KeyboardAvoid = styled.KeyboardAvoidingView.attrs({
   behavior: Platform.OS === 'ios' ? 'padding' : undefined,
