@@ -3,10 +3,9 @@
 <h3 align="center">In progress</h3>
 
 <p align="center">
-  <img src="https://i.ibb.co/G0vzZx3/existing-user-flow.png" alt="existing-user-flow" border="0">
-  <img src="https://i.ibb.co/ZNSXHtr/flow-new-user.png" alt="flow-new-user" border="0">
+  <img src="https://i.ibb.co/M7RJRyL/flow-new-user.png" alt="flow-new-user" border="0">
+  <img src="https://i.ibb.co/fQQ4KHq/existing-user-flow.png" alt="existing-user-flow" border="0">
 </p>
-
 
 ```sh
 $ git clone https://github.com/joseiltonjunior/after-app.git
@@ -15,7 +14,6 @@ $ install dependencies: yarn
 $ run server: yarn start
 $ open emulator:yarn android
 ```
-
 
 ## Credits
 
