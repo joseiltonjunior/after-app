@@ -12,7 +12,7 @@ export const Container = styled.View<ContainerProps>`
   width: 100%;
   height: ${responsiveSize(55)}px;
   padding: 0 ${responsiveSize(15)}px;
-  border-radius: ${responsiveSize(10)}px;
+  border-radius: ${responsiveSize(8)}px;
   background-color: ${theme.colors.Dark_900};
   margin-bottom: ${responsiveSize(10)}px;
   border-width: ${responsiveSize(2)}px;

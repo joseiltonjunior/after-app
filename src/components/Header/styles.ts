@@ -39,7 +39,7 @@ export const ComponentImg = styled.Image<ICompImg>`
   width: ${(props) => (props.bigImg ? responsiveSize(180) : responsiveSize(100))}px;
   height: ${(props) => (props.bigImg ? responsiveSize(180) : responsiveSize(100))}px;
   align-self: center;
-  margin: ${responsiveSize(30)}px 0 ${responsiveSize(20)}px 0;
+  margin: ${responsiveSize(30)}px 0 ${responsiveSize(30)}px 0;
 `;
 
 export const Title = styled.Text<INoLogo>`

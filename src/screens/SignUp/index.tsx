@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useState, useEffect } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
@@ -19,7 +19,7 @@ import { IState } from '@storage/index';
 import IUserState from '@storage/modules/user/types';
 import { setUser } from '@storage/modules/user/actions';
 import getValidationErros from '@utils/getValidationErros';
-import { ModalCustom } from '@components/ModalCustom';
+
 import Header from '@components/Header';
 
 interface SignInFormData {
@@ -36,10 +36,8 @@ export function SignUp(): JSX.Element {
   const confirmPasswordInputRef = useRef<TextInput>(null);
   const emailInputRef = useRef<TextInput>(null);
 
-  const [modal, setModal] = useState(false);
-
   const navigation = useNavigation();
-  const route = useRoute();
+
   const dispatch = useDispatch();
 
   const user = useSelector<IState, IUserState>((state) => state.user);
@@ -71,7 +69,6 @@ export function SignUp(): JSX.Element {
       const jsonValue = JSON.stringify(userData);
 
       await AsyncStorage.setItem('user', jsonValue);
-      console.tron.log(userData);
 
       dispatch(setUser(userData));
 
@@ -81,25 +78,12 @@ export function SignUp(): JSX.Element {
         const errors = getValidationErros(error);
 
         formRef.current?.setErrors(errors);
-
-        // setModal(true);
       }
     }
   }, []);
 
   return (
     <>
-      <ModalCustom
-        show={modal}
-        title="Atenção"
-        description={`Preencha corretamente todos os campos para acessar o app. \n `}
-        moreInfo="Atenção: sua senha deve conter no mínimo 6 digitos"
-        textSigleButton="Entendi"
-        actionSigleButton={() => {
-          setModal(false);
-        }}
-      />
-
       <KeyboardAvoid>
         <ScrollViewContainer>
           <Header
