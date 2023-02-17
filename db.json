@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      " id": 1,
+      "name": "Junior Ferreira",
+      "email": "joseiltonjuniortech@gmail.com",
+      "password": "teste00",
+      "phone_number": "81995764897"
+    },
+    {
+      " id": 2,
+      "name": "Teste 01",
+      "email": "testeteste@gmail.com",
+      "password": "teste00",
+      "phone_number": "99999999999"
+    }
+  ]
+}

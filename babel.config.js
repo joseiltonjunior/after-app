@@ -13,6 +13,7 @@ module.exports = {
           '@storage': './src/storage',
           '@theme': './src/theme',
           '@utils': './src/utils',
+          '@config': './src/config',
         },
       },
     ],

@@ -1,0 +1,112 @@
+[
+  {
+    "local": "R. Venezuela, 148 - Espinheiro, Recife - PE",
+    "name": "Winner Sports Bar",
+    "hour": "22:00 - 06:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 2,
+    "pic": "https://portalneuronio.ne10.uol.com.br/wp-content/uploads/2016/06/FH2504161152.jpg",
+    "phone": "(81) 99813-7574",
+    "description": "Boemia estilosa em ambiente acolhedor descontraído com porções mistas, lanches artesanais, e temas esportivos.",
+    "indicator": 0
+  },
+  {
+    "local": "Av. Bernardo Vieira de Melo, 1300 - Piedade, Jaboatão dos Guararapes",
+    "name": "Lounge Music",
+    "hour": "22:00 - 06:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 3,
+    "pic": "https://media-cdn.tripadvisor.com/media/photo-s/13/3a/d4/48/coco-bambu-lounge-music.jpg",
+    "phone": "(81) 98597-1267",
+    "description": "Variedade de shows e DJs para curtir sertanejo, funk, pop e hip-hop em clima animado e ampla pista de dança.",
+    "indicator": 5
+  },
+  {
+    "local": "R. São Mateus, 576 - Loja 1 - Iputinga, Recife - PE",
+    "name": "Barteco",
+    "hour": "17:00 - 22:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 5,
+    "pic": "https://clientes.programaconsumer.com.br/wp-content/uploads/2020/01/barteco-recife-pe-destaque.png",
+    "phone": "(81) 98679-8371",
+    "description": "Hamburgueria.",
+    "indicator": 33
+  },
+  {
+    "local": "R. Dep. Célso Miranda - Ipsep, Recife - PE",
+    "name": "Petiscaria Pajuçara",
+    "hour": "11:00 - 22:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 5,
+    "pic": "https://lh3.googleusercontent.com/p/AF1QipOzRMlfVf8nvBVLkA-TRPzXyQHbK7R-Tgj05w_k=s680-w680-h510",
+    "phone": "(81) 3125-0280",
+    "description": "Restaurante.",
+    "indicator": 33
+  },
+  {
+    "local": "R. Emíliano Braga, 185 - Iputinga, Recife - PE",
+    "name": "Paraibano's Bar",
+    "hour": "11:00 - 03:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 4,
+    "pic": "https://lh3.googleusercontent.com/v2pUpr3AyGPaU3dvfBHm9omP8DO64f0raocfKTwzOEXD7oAU8KaymaEnPDJfeDVEbuSAUnMR0Lo43Jl6=w768-h768-n-o-v1",
+    "phone": "(81) 3453-0256",
+    "description": "Restaurante boêmio serve menu variado de pratos e porções à la carte, em espaço despojado com mesas externas.",
+    "indicator": 1
+  },
+  {
+    "local": " R. Leopoldino Silva, 100 - Santana, Recife - PE",
+    "name": "Vaporetto Container Bar",
+    "hour": "11:00 - 02:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 3,
+    "pic": "https://media-cdn.tripadvisor.com/media/photo-s/06/c7/02/54/getlstd-property-photo.jpg",
+    "phone": "(81) 99930-9313",
+    "description": "Variedade de bolos, tortas, cozinha de bistrô, hambúrgueres e drinques em clima descontraído e espaço moderno.",
+    "indicator": 1
+  },
+  {
+    "local": "Av. Dezessete de Agosto, 1761 - Casa Forte, Recife - PE",
+    "name": "Real Botequim",
+    "hour": "11:00 - 02:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 1,
+    "pic": "https://media-cdn.tripadvisor.com/media/photo-s/0c/b1/91/53/real-botequim.jpg",
+    "phone": "(81) 3034-3434",
+    "description": "Clássico boteco com petiscos, chopes e pratos variados, com destaque à feijoada, drinques e roda de chorinho.",
+    "indicator": 5
+  },
+  {
+    "local": "R. Amélia, 422 - Graças, Recife - PE",
+    "name": "Cachaçaria Tradição",
+    "hour": "11:00 - 03:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 3,
+    "pic": "https://comerlerviajar.files.wordpress.com/2012/10/4118859924_82e675f70c_b.jpg",
+    "phone": "(81) 3243-5050",
+    "description": "Restaurante e cachaçaria em ambiente descontraído com música e buffet de pratos frios e quentes variados.",
+    "indicator": 9
+  },
+  {
+    "local": "R. da Hora, 34 - Espinheiro, Recife - PE",
+    "name": "Empório Sertanejo",
+    "hour": "10:00 - 04:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 2,
+    "pic": "https://media-cdn.tripadvisor.com/media/photo-s/0b/38/97/7b/emporio-sertaneijo-rua.jpg",
+    "phone": "(81) 3083-2739",
+    "description": "A culinária caseira do interior e costa nordestina, em amplo ambiente despretensioso com sacada coberta.",
+    "indicator": 5
+  },
+  {
+    "local": "Av. Boa Viagem, 618 - Boa Viagem, Recife - PE",
+    "name": "Under Sports Bar | Pub",
+    "hour": "18:00 - 01:00",
+    "payment": "Cartão e Dinheiro",
+    "stars": 2,
+    "pic": "https://res.cloudinary.com/tf-lab/image/upload/w_600,h_337,c_fill,g_auto:subject,q_auto,f_auto/restaurant/e559e72d-108a-462c-8460-276bb2832767/3cd240b4-7870-4d8f-a1f0-2d3e63fc3dd2.jpg",
+    "phone": "",
+    "description": "Boteco casual em nível abaixo da calçada tem área externa com interior estilizado, telão, e menu brasileiro.",
+    "indicator": 5
+  }
+]

@@ -1,12 +1,20 @@
-import React, { useEffect, useRef, useState, useCallback, useImperativeHandle } from 'react';
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  useImperativeHandle,
+  forwardRef,
+  ForwardRefRenderFunction,
+} from 'react';
 
-import { TextInputMaskProps } from 'react-native-masked-text';
+import { TextInputProps } from 'react-native';
 import { useField } from '@unform/core';
 
-import { Container, TextInput, Icon, TextTitleInput } from './styles';
+import { Container, TextInput, Icon, TextError, TextTitleInput } from './styles';
 import { useTheme } from 'styled-components';
 
-interface InputProps extends TextInputMaskProps {
+interface InputProps extends TextInputProps {
   name: string;
   icon: string;
   titleInput: string;
@@ -15,20 +23,21 @@ interface InputProps extends TextInputMaskProps {
 interface InputValueReference {
   value: string;
 }
-export function InputMask({
-  name,
-  icon,
-  titleInput,
-  value = '',
-  type,
-  refInput,
-  ...rest
-}: InputProps): JSX.Element {
+
+interface InputRef {
+  focus(): void;
+}
+
+const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
+  { name, icon, titleInput, ...rest },
+  ref
+): JSX.Element => {
   const inputElementRef = useRef<any>(null);
-  const { colors } = useTheme();
 
   const { registerField, defaultValue = '', fieldName, error } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
+
+  const { colors } = useTheme();
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
@@ -43,7 +52,7 @@ export function InputMask({
     setIsFilled(!!inputValueRef.current.value);
   }, []);
 
-  useImperativeHandle(refInput, () => ({
+  useImperativeHandle(ref, () => ({
     focus() {
       inputElementRef.current.focus();
     },
@@ -54,12 +63,13 @@ export function InputMask({
       name: fieldName,
       ref: inputValueRef.current,
       path: 'value',
-
-      setValue(_ref, value) {
+      setValue(_ref: any, value) {
         inputValueRef.current.value = value;
+        inputElementRef.current.setNativeProps({ text: value });
       },
       clearValue() {
         inputValueRef.current.value = '';
+        inputElementRef.current.clear();
       },
     });
   }, [fieldName, registerField]);
@@ -67,30 +77,23 @@ export function InputMask({
   return (
     <>
       <TextTitleInput>{titleInput}</TextTitleInput>
-
-      <Container isNumber={value.length} isFocused={isFocused} isErrored={!!error}>
-        <Icon
-          name={icon}
-          color={
-            error && value.length < 15 && !isFocused
-              ? colors.Red
-              : isFocused || isFilled
-              ? colors.Orange
-              : colors.Dark_300
-          }
-        />
+      <Container isFocused={isFocused} isErrored={!!error}>
+        <Icon name={icon} color={isFocused || isFilled ? colors.Orange : colors.Dark_300} />
 
         <TextInput
-          type={type}
+          {...rest}
           ref={inputElementRef}
           keyboardAppearance="dark"
           defaultValue={defaultValue}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
-          value={value}
-          {...rest}
+          onChangeText={(value) => {
+            inputValueRef.current.value = value;
+          }}
         />
       </Container>
     </>
   );
-}
+};
+
+export default forwardRef(Input);

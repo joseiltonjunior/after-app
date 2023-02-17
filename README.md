@@ -9,18 +9,16 @@
 
 </p>
 
-```sh
-$ git clone https://github.com/joseiltonjunior/qual-a-boa.git
-$ open paste: cd qual-a-boa
+
+
+$ git clone https://github.com/joseiltonjunior/after-app.git
+$ open paste: cd after-app
 $ install dependencies: yarn
 $ run server: yarn start
 $ open emulator:yarn android
-```
+
 
 ## Credits
 
 - @dvlp.jr
 - @dvlp.code
-
-
-
