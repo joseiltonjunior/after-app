@@ -21,7 +21,7 @@ interface ICard {
 
 export function Card({ name, pic, stars, action }: ICard): JSX.Element {
   return (
-    <TouchCard onPress={action}>
+    <TouchCard onPress={action} disabled>
       <CardView>
         <CardHeader>
           <ImageCard

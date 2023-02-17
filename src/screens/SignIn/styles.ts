@@ -22,7 +22,11 @@ export const Container = styled.View``;
 export const ViewLoading = styled.View`
   justify-content: center;
   align-self: center;
+
   flex: 1;
+  width: 100%;
+  padding: 0 ${responsiveSize(40)}px;
+  background-color: ${({ theme }) => theme.colors.Dark_600};
 `;
 
 export const LoadingIndicator = styled(ActivityIndicator).attrs(({ theme }) => ({
@@ -36,8 +40,6 @@ export const TextViewLoading = styled.Text`
   font-family: 'RobotoSlab-Medium';
   margin-top: ${responsiveSize(50)}px;
   text-align: center;
-
-  max-width: 80%;
 `;
 
 export const Next = styled(Button)`

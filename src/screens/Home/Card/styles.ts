@@ -37,12 +37,12 @@ export const CardContent = styled.View`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
-  padding: 10px;
+  padding: ${responsiveSize(10)}px ${responsiveSize(15)}px;
 `;
 
 export const TextCardContent = styled.Text`
   color: ${theme.colors.Light};
-  font-size: ${responsiveSize(15)}px;
+  font-size: ${responsiveSize(14)}px;
   font-family: 'RobotoSlab-Medium';
 `;
 

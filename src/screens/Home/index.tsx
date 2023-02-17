@@ -137,7 +137,7 @@ export function Home(): JSX.Element {
                     {day}
                     <TitleHeader>{user.name}</TitleHeader>
                   </TitleHeader>
-                  <TitleResults>{user.email}</TitleResults>
+                  <TitleResults>Se dirigir, não beba!</TitleResults>
                 </ViewName>
 
                 <ButtonProfile
@@ -198,7 +198,7 @@ export function Home(): JSX.Element {
                         Keyboard.dismiss();
                       }}
                     >
-                      <TitleContent>Lista de after's</TitleContent>
+                      <TitleContent>Listar todos</TitleContent>
                     </ButtonAfter>
 
                     <ButtonAfter

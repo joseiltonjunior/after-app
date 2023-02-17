@@ -38,7 +38,7 @@ export const HeaderView = styled.View`
 
 export const TitleHeader = styled.Text<ITitleColor>`
   color: ${(props) => (props.isOrange ? theme.colors.Orange : theme.colors.Light)};
-  font-size: ${responsiveSize(16)}px;
+  font-size: ${responsiveSize(15)}px;
   font-family: 'RobotoSlab-Bold';
 `;
 
@@ -48,7 +48,7 @@ export const ViewInput = styled.View`
 
   background-color: ${theme.colors.Dark_900};
   border-radius: ${responsiveSize(10)}px;
-  height: ${responsiveSize(55)}px;
+  height: ${responsiveSize(45)}px;
 
   margin-top: ${responsiveSize(15)}px;
   padding: 0 ${responsiveSize(15)}px;
@@ -60,7 +60,7 @@ export const InputHeader = styled.TextInput.attrs({
   flex: 1;
 
   color: ${theme.colors.Light};
-  font-size: ${responsiveSize(17)}px;
+  font-size: ${responsiveSize(15)}px;
   font-family: 'RobotoSlab-Medium';
 `;
 
@@ -124,7 +124,6 @@ export const Pic = styled.Image<IImagePic>`
 `;
 
 export const Content = styled.View`
-  /* width: 90%; */
   margin-top: ${responsiveSize(5)}px;
 `;
 
@@ -160,7 +159,7 @@ export const LineView = styled.View`
 
 export const TitleContent = styled.Text`
   color: ${theme.colors.Light};
-  font-size: ${responsiveSize(17)}px;
+  font-size: ${responsiveSize(14)}px;
   font-family: 'RobotoSlab-Bold';
   margin-bottom: ${responsiveSize(5)}px;
   text-align: center;
@@ -168,7 +167,7 @@ export const TitleContent = styled.Text`
 
 export const TitleResults = styled.Text`
   color: ${theme.colors.Light};
-  font-size: ${responsiveSize(14)}px;
+  font-size: ${responsiveSize(12)}px;
   font-family: 'RobotoSlab-Bold';
   text-align: left;
   opacity: 0.5;

@@ -45,12 +45,12 @@ export function SignIn(): JSX.Element {
     try {
       const user = await AsyncStorage.getItem('user');
 
-      // if (user) {
-      //   const convertUser: IUserState = JSON.parse(user);
+      if (user) {
+        const convertUser: IUserState = JSON.parse(user);
 
-      //   dispatch(setUser(convertUser));
-      //   navigation.navigate('Home' as never);
-      // }
+        dispatch(setUser(convertUser));
+        navigation.navigate('Home' as never);
+      }
 
       setWithUser(false);
     } catch (e) {
